@@ -1,5 +1,4 @@
 # Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
-# Copyright (c) 2015 Amel-Tech (a division of Amel Srl). All right reserved.
 #
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
@@ -65,75 +64,3 @@ arduino_zero_native.build.variant_system_lib=
 arduino_zero_native.build.vid=0x2341
 arduino_zero_native.build.pid=0x804d
 
-AMEL_SmartEverything_atmel_ice.name=Smart Everything (via Atmel-ICE)
-AMEL_SmartEverything_atmel_ice.vid.0=0x03eb
-AMEL_SmartEverything_atmel_ice.pid.0=0x2141
-AMEL_SmartEverything_atmel_ice.upload.tool=openocd
-AMEL_SmartEverything_atmel_ice.upload.protocol=swd
-AMEL_SmartEverything_atmel_ice.upload.maximum_size=262144
-AMEL_SmartEverything_atmel_ice.upload.use_1200bps_touch=false
-AMEL_SmartEverything_atmel_ice.upload.wait_for_upload_port=false
-AMEL_SmartEverything_atmel_ice.upload.native_usb=false
-AMEL_SmartEverything_atmel_ice.build.mcu=cortex-m0plus
-AMEL_SmartEverything_atmel_ice.build.f_cpu=48000000L
-AMEL_SmartEverything_atmel_ice.build.usb_product="Arduino Zero"
-AMEL_SmartEverything_atmel_ice.build.usb_manufacturer="Arduino LLC"
-AMEL_SmartEverything_atmel_ice.build.board=SAMD_SMARTEVERYTHING
-AMEL_SmartEverything_atmel_ice.build.core=arduino
-AMEL_SmartEverything_atmel_ice.build.extra_flags=-D__SAMD21J18A__ {build.usb_flags}
-AMEL_SmartEverything_atmel_ice.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-AMEL_SmartEverything_atmel_ice.build.openocdscript=openocd_scripts/variant_atmel_ice.cfg
-AMEL_SmartEverything_atmel_ice.build.variant=AMEL_SmartEverything
-AMEL_SmartEverything_atmel_ice.build.variant_system_lib=
-AMEL_SmartEverything_atmel_ice.build.vid=0x2341
-AMEL_SmartEverything_atmel_ice.build.pid=0x004d
-AMEL_SmartEverything_atmel_ice.bootloader.tool=openocd
-AMEL_SmartEverything_atmel_ice.bootloader.file=zero/samd21_sam_ba.bin
-
-AMEL_SmartEverything_sam_ice.name=Smart Everything (via SAM-ICE)
-AMEL_SmartEverything_sam_ice.vid.0=0x03eb
-AMEL_SmartEverything_sam_ice.pid.0=0x2111
-AMEL_SmartEverything_sam_ice.upload.tool=openocd
-AMEL_SmartEverything_sam_ice.upload.protocol=swd
-AMEL_SmartEverything_sam_ice.upload.maximum_size=262144
-AMEL_SmartEverything_sam_ice.upload.use_1200bps_touch=false
-AMEL_SmartEverything_sam_ice.upload.wait_for_upload_port=false
-AMEL_SmartEverything_sam_ice.upload.native_usb=false
-AMEL_SmartEverything_sam_ice.build.mcu=cortex-m0plus
-AMEL_SmartEverything_sam_ice.build.f_cpu=48000000L
-AMEL_SmartEverything_sam_ice.build.usb_product="Arduino Zero"
-AMEL_SmartEverything_sam_ice.build.usb_manufacturer="Arduino LLC"
-AMEL_SmartEverything_sam_ice.build.board=SAMD_SMARTEVERYTHING
-AMEL_SmartEverything_sam_ice.build.core=arduino
-AMEL_SmartEverything_sam_ice.build.extra_flags=-D__SAMD21J18A__ {build.usb_flags}
-AMEL_SmartEverything_sam_ice.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-AMEL_SmartEverything_sam_ice.build.openocdscript=openocd_scripts/variant_sam_ice.cfg
-AMEL_SmartEverything_sam_ice.build.variant=AMEL_SmartEverything
-AMEL_SmartEverything_sam_ice.build.variant_system_lib=
-AMEL_SmartEverything_sam_ice.build.vid=0x2341
-AMEL_SmartEverything_sam_ice.build.pid=0x004d
-AMEL_SmartEverything_sam_ice.bootloader.tool=openocd
-AMEL_SmartEverything_sam_ice.bootloader.file=zero/samd21_sam_ba.bin
-
-AMEL_SmartEverything_native.name=Smart Everything (Native USB Port)
-AMEL_SmartEverything_native.vid.0=0x2341
-AMEL_SmartEverything_native.pid.0=0x004d
-AMEL_SmartEverything_native.upload.tool=bossac
-AMEL_SmartEverything_native.upload.protocol=sam-ba
-AMEL_SmartEverything_native.upload.maximum_size=262144
-AMEL_SmartEverything_native.upload.use_1200bps_touch=true
-AMEL_SmartEverything_native.upload.wait_for_upload_port=true
-AMEL_SmartEverything_native.upload.native_usb=true
-AMEL_SmartEverything_native.build.mcu=cortex-m0plus
-AMEL_SmartEverything_native.build.f_cpu=48000000L
-AMEL_SmartEverything_native.build.usb_product="Arduino Zero"
-AMEL_SmartEverything_native.build.usb_manufacturer="Arduino LLC"
-AMEL_SmartEverything_native.build.board=SAMD_SMARTEVERYTHING
-AMEL_SmartEverything_native.build.core=arduino
-AMEL_SmartEverything_native.build.extra_flags=-D__SAMD21J18A__ {build.usb_flags}
-AMEL_SmartEverything_native.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
-AMEL_SmartEverything_native.build.openocdscript=
-AMEL_SmartEverything_native.build.variant=AMEL_SmartEverything
-AMEL_SmartEverything_native.build.variant_system_lib=
-AMEL_SmartEverything_native.build.vid=0x2341
-AMEL_SmartEverything_native.build.pid=0x004d
