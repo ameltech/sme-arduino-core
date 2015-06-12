@@ -1,0 +1,4 @@
+
+name=AMEL-Tech Boards
+version=1.0.0
+
