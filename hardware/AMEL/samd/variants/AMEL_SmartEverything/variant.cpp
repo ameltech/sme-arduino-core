@@ -32,7 +32,7 @@ const PinDescription g_APinDescription[]=
  * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
  * | 0          | 0 <- RX          |  PA11  |                 | EIC/EXTINT[11] ADC/AIN[19]           PTC/X[3] *SERCOM0/PAD[3]  SERCOM2/PAD[3]  TCC0/WO[3]  TCC1/WO[1]
  * | 1          | 1 -> TX          |  PA10  |                 | EIC/EXTINT[10] ADC/AIN[18]           PTC/X[2] *SERCOM0/PAD[2]  SERCOM2/PAD[2]  TCC0/WO[2]  TCC1/WO[0]
- * | 2          | ~2               |  PB31  |                 | EIC/EXTINT[14]                                                 SERCOM5/PAD[1] *TCC0/WO[1]  TCC1/WO[3]
+ * | 2          | ~2               |  PB31  |                 | EIC/EXTINT[15]                                                 SERCOM5/PAD[1] *TCC0/WO[1]  TCC1/WO[3]
  * | 3          | ~3               |  PB30  |                 | EIC/EXTINT[14]                                                 SERCOM5/PAD[0] *TCC0/WO[0]  TCC1/WO[2]
  * | 4          | ~4               |  PA14  |                 | EIC/EXTINT[14]                                 SERCOM2/PAD[2]  SERCOM4/PAD[2] *TC3/WO[0]   TCC0/WO[4]
  * | 5          | ~5               |  PA15  |                 | EIC/EXTINT[15]                                 SERCOM2/PAD[3]  SERCOM4/PAD[3] *TC3/WO[1]   TCC0/WO[5]
