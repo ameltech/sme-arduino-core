@@ -222,6 +222,17 @@ const PinDescription g_APinDescription[]=
   { PORTA, 12, PIO_PWM, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM), No_ADC_Channel, PWM2_CH0, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // TCC2/WO[0]
   { PORTB, 11, PIO_PWM, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM), No_ADC_Channel, PWM5_CH1, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // TC5/WO[1]
   { PORTB, 10, PIO_PWM, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM), No_ADC_Channel, PWM5_CH0, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // TC5/WO[1]
+            
+/*
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ * |            | I/O Exte         |        |                 |
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ * | 48         | IO_EXT_RST       |  PA13  |                 | EXTINT[13] SERCOM2/ PAD[1] SERCOM4/ PAD[1] TCC2/WO[1] TCC0/ WO[7] AC/CMP[1]
+ * | 49         | IO_EXT_INT       |  PB06  |                 |EXTINT[6] AIN[14] Y[12]
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ */
+  { PORTA, 13, PIO_PWM, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM), No_ADC_Channel, PWM2_CH1, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // TCC2/WO[1]
+  { PORTB, 06, PIO_ANALOG, PIN_ATTR_ANALOG, ADC_Channel0, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_14 }, // ADC/AIN[14]
 } ;
 
 
