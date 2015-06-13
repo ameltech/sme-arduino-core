@@ -37,7 +37,7 @@ AMEL_SmartEverything_atmel_ice.build.variant_system_lib=
 AMEL_SmartEverything_atmel_ice.build.vid=0x2341
 AMEL_SmartEverything_atmel_ice.build.pid=0x004d
 AMEL_SmartEverything_atmel_ice.bootloader.tool=arduino:openocd
-AMEL_SmartEverything_atmel_ice.bootloader.file=zero/samd21_sam_ba.bin
+AMEL_SmartEverything_atmel_ice.bootloader.file=sme/samd21_sam_ba.bin
 
 AMEL_SmartEverything_sam_ice.name=Smart Everything (via SAM-ICE)
 AMEL_SmartEverything_sam_ice.vid.0=0x03eb
@@ -62,7 +62,7 @@ AMEL_SmartEverything_sam_ice.build.variant_system_lib=
 AMEL_SmartEverything_sam_ice.build.vid=0x2341
 AMEL_SmartEverything_sam_ice.build.pid=0x004d
 AMEL_SmartEverything_sam_ice.bootloader.tool=arduino:openocd
-AMEL_SmartEverything_sam_ice.bootloader.file=zero/samd21_sam_ba.bin
+AMEL_SmartEverything_sam_ice.bootloader.file=sme/samd21_sam_ba.bin
 
 AMEL_SmartEverything_native.name=Smart Everything (Native USB Port)
 AMEL_SmartEverything_native.vid.0=0x2341
