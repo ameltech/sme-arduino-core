@@ -17,7 +17,7 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "variant.h"
+#include <Arduino.h>
 
 /*
  * Pins descriptions
@@ -270,4 +270,44 @@ void SERCOM4_Handler()
 void SERCOM5_Handler()
 {
   BLE.IrqHandler();
+}
+
+
+void LED_GREEN_ON(uint32_t value) {
+    if (value == HIGH) {
+        digitalWrite(PIN_LED_GREEN, LOW);
+        } else if (value == LOW) {
+        digitalWrite(PIN_LED_GREEN, HIGH);
+        } else {
+        digitalWrite(PIN_LED_GREEN, 255-value);   // in case of PWM
+    }
+}
+
+void LED_RED_ON(uint32_t value)   {
+    if (value == HIGH) {
+        digitalWrite(PIN_LED_RED, LOW);
+        } else if (value == LOW) {
+        digitalWrite(PIN_LED_RED, HIGH);
+        } else {
+        digitalWrite(PIN_LED_RED, 255-value);   // in case of PWM
+    }
+}
+
+void LED_BLUE_ON(uint32_t value) {
+    if (value == HIGH) {
+        digitalWrite(PIN_LED_BLUE, LOW);
+        } else if (value == LOW) {
+        digitalWrite(PIN_LED_BLUE, HIGH);
+        } else {
+        digitalWrite(PIN_LED_BLUE, 255-value);   // in case of PWM
+    }
+}
+
+int button1IsPressed(void) {
+    return !digitalRead(PIN_SME_BUTTON1);
+}
+
+
+int button2IsPressed(void) {
+    return !digitalRead(PIN_SME_BUTTON2);
 }
