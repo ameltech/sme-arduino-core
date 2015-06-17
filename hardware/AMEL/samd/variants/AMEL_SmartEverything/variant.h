@@ -88,11 +88,15 @@ extern "C"
 #define PIN_LED3             PIN_LED_TXL
 #define LED_BUILTIN          PIN_LED_13
 
-
-
 // I/O Extender
 #define PIN_IO_EXT_RST      (48u)
 #define PIN_IO_EXT_INT      (49u)
+
+
+// I/O Extender
+#define PIN_SME_BUTTON1        (41u)
+#define PIN_SME_BUTTON2        (42u)
+
 
 /*
  * Analog pins
@@ -173,6 +177,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 #define PIN_USB_DM           (29ul)
 #define PIN_USB_DP           (30ul)
 
+
 #ifdef __cplusplus
 }
 #endif
@@ -180,6 +185,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/
+
 
 #ifdef __cplusplus
 
@@ -223,5 +229,7 @@ extern Uart SigFox;
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
+                             
+extern uint8_t smeInitError;
 #endif /* _VARIANT_AMEL_SMARTEVERYTHING_ */
 
