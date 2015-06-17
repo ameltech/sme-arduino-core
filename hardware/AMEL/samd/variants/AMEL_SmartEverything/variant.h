@@ -88,11 +88,15 @@ extern "C"
 #define PIN_LED3             PIN_LED_TXL
 #define LED_BUILTIN          PIN_LED_13
 
-
-
 // I/O Extender
 #define PIN_IO_EXT_RST      (48u)
 #define PIN_IO_EXT_INT      (49u)
+
+
+// I/O Extender
+#define PIN_SME_BUTTON1        (41u)
+#define PIN_SME_BUTTON2        (42u)
+
 
 /*
  * Analog pins
@@ -173,6 +177,31 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 #define PIN_USB_DM           (29ul)
 #define PIN_USB_DP           (30ul)
 
+/*
+    RGB wrapper function
+    These functions has been created for a more comfortable use 
+      because internally wrap the inversion of the HIGH, LOW meaning
+      
+    Using these function it remain the same Arduino User Experience to light a led
+    HIGH = Light ON
+    LOW  = Light OFF
+    
+*/
+void LED_GREEN_ON(uint32_t value);
+void LED_RED_ON(uint32_t value);
+void LED_BLUE_ON(uint32_t value);
+
+
+/*
+    User Button wrapper function.
+    
+    return:
+    1 = button PRESSED
+    0 = button RELEASED
+*/
+int button1IsPressed(void);
+int button2IsPressed(void);
+
 #ifdef __cplusplus
 }
 #endif
@@ -180,6 +209,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only
  *----------------------------------------------------------------------------*/
+
 
 #ifdef __cplusplus
 
@@ -223,5 +253,12 @@ extern Uart SigFox;
 #define SERIAL_PORT_HARDWARE        Serial1
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
+
+#define LED_GREEN_INIT  pinMode(PIN_LED_GREEN, OUTPUT)
+#define LED_RED_INIT    pinMode(PIN_LED_RED, OUTPUT)
+#define LED_BLUE_INIT   pinMode(PIN_LED_BLUE, OUTPUT)
+
+                             
+extern uint8_t smeInitError;
 #endif /* _VARIANT_AMEL_SMARTEVERYTHING_ */
 
