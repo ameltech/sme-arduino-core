@@ -156,6 +156,19 @@ void initVariant() {
     delay(10); // just wait a while
     digitalWrite(PIN_IO_EXT_RST, HIGH);
 
+    // initialize button1 & button2 as input
+    pinMode(PIN_SME_BUTTON1, INPUT_PULLUP);
+    pinMode(PIN_SME_BUTTON2, INPUT_PULLUP);
+    
+    
+    // initialize RGB LED
+    LED_GREEN_INIT;
+    LED_RED_INIT;
+    LED_BLUE_INIT;
+    LED_GREEN_ON(LOW);
+    LED_BLUE_ON(LOW);
+    LED_RED_ON(LOW);
+        
         
     // initialize the IO_Extender
     ioExtenderInit();
