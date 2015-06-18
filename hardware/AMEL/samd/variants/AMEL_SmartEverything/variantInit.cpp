@@ -165,9 +165,9 @@ void initVariant() {
     LED_GREEN_INIT;
     LED_RED_INIT;
     LED_BLUE_INIT;
-    LED_GREEN_ON(LOW);
-    LED_BLUE_ON(LOW);
-    LED_RED_ON(LOW);
+    ledGreenLight(LOW);
+    ledBlueLight(LOW);
+    ledRedLight(LOW);
         
         
     // initialize the IO_Extender
