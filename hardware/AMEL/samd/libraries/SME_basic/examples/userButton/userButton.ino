@@ -15,7 +15,7 @@
 // the setup function runs once when you press reset or power the board
 void setup() {
 
-    // LED & User Button are already initilized by the SME core.
+    // LED & User Button are already initialized by the SME core.
     // it is not required to do here
 }
 
@@ -23,14 +23,14 @@ void setup() {
 void loop() {
 
     if (button1IsPressed()) {
-        LED_BLUE_ON(HIGH);
+        ledBlueLight(HIGH);
     } else {
-        LED_BLUE_ON(LOW);
+        ledBlueLight(LOW);
     }
 
     if (button2IsPressed()) {
-        LED_RED_ON(HIGH);
+        ledRedLight(HIGH);
     } else {
-        LED_RED_ON(LOW);
+        ledRedLight(LOW);
     }
 }
