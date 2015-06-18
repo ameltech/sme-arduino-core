@@ -273,32 +273,32 @@ void SERCOM5_Handler()
 }
 
 
-void LED_GREEN_ON(uint32_t value) {
+void ledGreenLight(uint32_t value) {
     if (value == HIGH) {
         digitalWrite(PIN_LED_GREEN, LOW);
-        } else if (value == LOW) {
+    } else if (value == LOW) {
         digitalWrite(PIN_LED_GREEN, HIGH);
-        } else {
+    } else {
         digitalWrite(PIN_LED_GREEN, 255-value);   // in case of PWM
     }
 }
 
-void LED_RED_ON(uint32_t value)   {
+void ledRedLight(uint32_t value)   {
     if (value == HIGH) {
         digitalWrite(PIN_LED_RED, LOW);
-        } else if (value == LOW) {
+    } else if (value == LOW) {
         digitalWrite(PIN_LED_RED, HIGH);
-        } else {
+    } else {
         digitalWrite(PIN_LED_RED, 255-value);   // in case of PWM
     }
 }
 
-void LED_BLUE_ON(uint32_t value) {
+void ledBlueLight(uint32_t value) {
     if (value == HIGH) {
         digitalWrite(PIN_LED_BLUE, LOW);
-        } else if (value == LOW) {
+    } else if (value == LOW) {
         digitalWrite(PIN_LED_BLUE, HIGH);
-        } else {
+    } else {
         digitalWrite(PIN_LED_BLUE, 255-value);   // in case of PWM
     }
 }
