@@ -173,3 +173,4 @@ void initVariant() {
     // initialize the IO_Extender
     ioExtenderInit();
 }
+
