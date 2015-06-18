@@ -279,7 +279,7 @@ void ledGreenLight(uint32_t value) {
     } else if (value == LOW) {
         digitalWrite(PIN_LED_GREEN, HIGH);
     } else {
-        digitalWrite(PIN_LED_GREEN, 255-value);   // in case of PWM
+        analogWrite(PIN_LED_GREEN, 255-value);   // in case of PWM
     }
 }
 
@@ -289,7 +289,7 @@ void ledRedLight(uint32_t value)   {
     } else if (value == LOW) {
         digitalWrite(PIN_LED_RED, HIGH);
     } else {
-        digitalWrite(PIN_LED_RED, 255-value);   // in case of PWM
+        analogWrite(PIN_LED_RED, 255-value);   // in case of PWM
     }
 }
 
@@ -299,7 +299,7 @@ void ledBlueLight(uint32_t value) {
     } else if (value == LOW) {
         digitalWrite(PIN_LED_BLUE, HIGH);
     } else {
-        digitalWrite(PIN_LED_BLUE, 255-value);   // in case of PWM
+        analogWrite(PIN_LED_BLUE, 255-value);   // in case of PWM
     }
 }
 
