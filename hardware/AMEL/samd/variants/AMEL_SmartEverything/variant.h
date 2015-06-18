@@ -15,7 +15,7 @@
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
+ */
 
 #ifndef _VARIANT_AMEL_SMARTEVERYTHING_
 #define _VARIANT_AMEL_SMARTEVERYTHING_
@@ -183,24 +183,24 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
     RGB wrapper function
     These functions has been created for a more comfortable use 
       because internally wrap the inversion of the HIGH, LOW meaning
-      
+
     Using these function it remain the same Arduino User Experience to light a led
     HIGH = Light ON
     LOW  = Light OFF
-    
-*/
-void LED_GREEN_ON(uint32_t value);
-void LED_RED_ON(uint32_t value);
-void LED_BLUE_ON(uint32_t value);
+
+ */
+void ledGreenLight(uint32_t value);
+void ledRedLight(uint32_t value);
+void ledBlueLight(uint32_t value);
 
 
 /*
     User Button wrapper function.
-    
+
     return:
     1 = button PRESSED
     0 = button RELEASED
-*/
+ */
 int button1IsPressed(void);
 int button2IsPressed(void);
 
@@ -218,7 +218,7 @@ int button2IsPressed(void);
 /*	=========================
  *	===== SERCOM DEFINITION
  *	=========================
-*/
+ */
 extern SERCOM sercom0;
 extern SERCOM sercom1;
 extern SERCOM sercom2;
@@ -260,7 +260,7 @@ extern Uart SigFox;
 #define LED_RED_INIT    pinMode(PIN_LED_RED, OUTPUT)
 #define LED_BLUE_INIT   pinMode(PIN_LED_BLUE, OUTPUT)
 
-                             
+
 extern uint8_t smeInitError;
 #endif /* _VARIANT_AMEL_SMARTEVERYTHING_ */
 
