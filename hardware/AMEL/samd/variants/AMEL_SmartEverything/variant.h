@@ -210,8 +210,8 @@ void ledBlueLight(uint32_t value);
     1 = button PRESSED
     0 = button RELEASED
  */
-int button1IsPressed(void);
-int button2IsPressed(void);
+int isButtonOnePressed(void);
+int isButtonTwoPressed(void);
 
 
 /*

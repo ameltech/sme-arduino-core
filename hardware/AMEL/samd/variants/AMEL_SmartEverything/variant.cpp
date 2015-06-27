@@ -314,12 +314,12 @@ void ledBlueLight(uint32_t value) {
     }
 }
 
-int button1IsPressed(void) {
+int isButtonOnePressed(void) {
     return !digitalRead(PIN_SME_BUTTON1);
 }
 
 
-int button2IsPressed(void) {
+int isButtonTwoPressed(void) {
     return !digitalRead(PIN_SME_BUTTON2);
 }
 
