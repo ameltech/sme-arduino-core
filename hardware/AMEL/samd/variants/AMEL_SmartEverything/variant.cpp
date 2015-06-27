@@ -225,14 +225,26 @@ const PinDescription g_APinDescription[]=
             
 /*
  * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
- * |            | I/O Exte         |        |                 |
+ * |            | I/O Extension    |        |                 |
  * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
  * | 48         | IO_EXT_RST       |  PA13  |                 | EXTINT[13] SERCOM2/ PAD[1] SERCOM4/ PAD[1] TCC2/WO[1] TCC0/ WO[7] AC/CMP[1]
- * | 49         | IO_EXT_INT       |  PB06  |                 |EXTINT[6] AIN[14] Y[12]
+ * | 49         | IO_EXT_INT       |  PB06  |                 | EXTINT[6] AIN[14] Y[12]
  * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
  */
   { PORTA, 13, PIO_PWM, (PIN_ATTR_DIGITAL|PIN_ATTR_PWM), No_ADC_Channel, PWM2_CH1, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // TCC2/WO[1]
   { PORTB, 06, PIO_ANALOG, PIN_ATTR_ANALOG, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_6 }, // ADC/AIN[14]
+      
+/*
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ * |            | Step-up PWR      |        |                 |
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ * | 50         | EXT_PWR          |  PB04  |                 | EXTINT[4] AIN[12] Y[10]
+ * | 51         | REG_ON           |  PB05  |                 | EXTINT[5] AIN[13] Y[11]
+ * +------------+------------------+--------+-----------------+--------------------------------------------------------------------------------------------------------
+ */      
+  { PORTB,  4, PIO_INPUT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_4},  // used as input only
+//{ PORTB,  4, PIO_INPUT_PULLUP, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_NONE }, // ADC/AIN[0]
+  { PORTB,  5, PIO_OUTPUT, PIN_ATTR_DIGITAL, No_ADC_Channel, NOT_ON_PWM, NOT_ON_TIMER, EXTERNAL_INT_5 }, // used as output only
 } ;
 
 
@@ -310,4 +322,18 @@ int button1IsPressed(void) {
 
 int button2IsPressed(void) {
     return !digitalRead(PIN_SME_BUTTON2);
+}
+
+
+bool isOnBattery(void) {   
+    return !digitalRead(PIN_EXT_PWR);
+}
+
+
+void setStepUp(uint32_t on) {
+    if (on) {
+        digitalWrite(PIN_REG_ON, HIGH);
+        } else {
+        digitalWrite(PIN_REG_ON, LOW);
+    }
 }
