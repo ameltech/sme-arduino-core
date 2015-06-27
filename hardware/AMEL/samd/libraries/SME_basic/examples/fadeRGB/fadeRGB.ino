@@ -1,8 +1,6 @@
 /*
  Shows The PWM functionalities on the RGB Led
-
  created 18 Jun 2015
- 
  by Mik (smkk@amel-tech.com)
  */
 
@@ -10,7 +8,7 @@
 
 long randNumberR, randNumberG, randNumberB;
 
-void setup(){    
+void setup(){
     randomSeed(analogRead(0));
 }
 
@@ -24,6 +22,6 @@ void loop(){
   ledGreenLight(randNumberG);
   ledBlueLight(randNumberB);
   ledRedLight(randNumberR);
-  
+
     delay(500);
 }

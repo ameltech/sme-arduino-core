@@ -187,6 +187,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 /*
     RGB wrapper function
     These functions has been created for a more comfortable use 
+
       because internally wrap the inversion of the HIGH, LOW meaning.
     Using these function it remain the same Arduino User Experience to light a led.
 
@@ -195,6 +196,7 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
             HIGH   = light to the maximum level
             LOW    = switch off the Led
             1..255 = pwm value for different level of light
+
  */
 void ledGreenLight(uint32_t value);
 void ledRedLight(uint32_t value);
@@ -207,27 +209,27 @@ void ledBlueLight(uint32_t value);
     return:
     1 = button PRESSED
     0 = button RELEASED
-*/
+ */
 int button1IsPressed(void);
 int button2IsPressed(void);
 
 
 /*
     Enable/Disable the StepUp
-    
+
     param:
     true = Step-up the Battery Power
     false= Do not Step-up the Battery Power
-*/
+ */
 void setStepUp(uint32_t on);
 
 /*
     Return the information if the StepUp is enabled
-    
+
     return:
     true= the StepUp is running
     false = the Sme is not under StepUp Power
-*/
+ */
 bool isOnBattery(void);
 
 #ifdef __cplusplus

@@ -175,6 +175,7 @@ void initVariant() {
     pinMode(PIN_REG_ON, OUTPUT);
     setStepUp(LOW);
 
+
     // initialize the IO_Extender
     ioExtenderInit();
 }

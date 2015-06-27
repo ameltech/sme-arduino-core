@@ -1,6 +1,5 @@
 /*
  Shows The result of the sme initialization phase
-
  created 16 Jun 2015
  by Mik (smkk@amel-tech.com)
  */
@@ -10,7 +9,7 @@
 void setup() {
     // LED & User Button are already initialized by the SME core.
     // it is not required to do here
-    
+
     SerialUSB.begin(115200);
 }
 
@@ -24,7 +23,7 @@ void loop() {
   }    
   else {
     //  ERROR !!!!!!! FLASH EVERYTHING
-    
+
     SerialUSB.println("ERROR !");
 
         pinMode(PIN_LED_RXL, OUTPUT);
@@ -68,4 +67,3 @@ void loop() {
     delay(2000);
 
 }
-
