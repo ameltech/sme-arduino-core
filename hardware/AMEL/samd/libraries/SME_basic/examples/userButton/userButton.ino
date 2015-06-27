@@ -22,13 +22,13 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
 
-    if (button1IsPressed()) {
+    if (isButtonOnePressed()) {
         ledBlueLight(HIGH);
     } else {
         ledBlueLight(LOW);
     }
 
-    if (button2IsPressed()) {
+    if (isButtonTwoPressed()) {
         ledRedLight(HIGH);
     } else {
         ledRedLight(LOW);
