@@ -1,6 +1,5 @@
 /*
  Shows The result of the sme initialization phase
-
  created 16 Jun 2015
  by Mik (smkk@amel-tech.com)
  */
@@ -68,4 +67,3 @@ void loop() {
     delay(2000);
 
 }
-

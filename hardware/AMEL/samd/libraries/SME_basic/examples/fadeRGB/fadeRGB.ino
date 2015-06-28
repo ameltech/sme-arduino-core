@@ -1,8 +1,6 @@
 /*
  Shows The PWM functionalities on the RGB Led
-
  created 18 Jun 2015
-
  by Mik (smkk@amel-tech.com)
  */
 

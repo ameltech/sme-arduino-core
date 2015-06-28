@@ -1,6 +1,5 @@
 /*
  Shows How to use the SmartEverything RGB Led
-
  created 14 Jun 2015
  by Mik (smkk@amel-tech.com)
  */

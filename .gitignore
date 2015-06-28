@@ -26,3 +26,13 @@
 *.exe
 *.out
 *.app
+*.d
+
+#Atmel Studio files
+*.atsuo
+/**/Debug/**/*
+
+
+#Vim files
+*.*~
+*.swp

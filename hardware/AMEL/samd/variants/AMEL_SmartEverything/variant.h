@@ -15,7 +15,7 @@
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-*/
+ */
 
 #ifndef _VARIANT_AMEL_SMARTEVERYTHING_
 #define _VARIANT_AMEL_SMARTEVERYTHING_
@@ -35,6 +35,7 @@
  *----------------------------------------------------------------------------*/
 
 #include "WVariant.h"
+#include <stdbool.h>
 
 #ifdef __cplusplus
 #include "SERCOM.h"
@@ -88,12 +89,18 @@ extern "C"
 #define PIN_LED3             PIN_LED_TXL
 #define LED_BUILTIN          PIN_LED_13
 
+
+
 // I/O Extender
 #define PIN_IO_EXT_RST      (48u)
 #define PIN_IO_EXT_INT      (49u)
 
 
-// I/O Extender
+// Step-Up Power
+#define PIN_EXT_PWR         (50u)
+#define PIN_REG_ON          (51u)
+
+// User Button
 #define PIN_SME_BUTTON1        (41u)
 #define PIN_SME_BUTTON2        (42u)
 
@@ -180,11 +187,15 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 /*
     RGB wrapper function
     These functions has been created for a more comfortable use 
-      because internally wrap the inversion of the HIGH, LOW meaning
 
-    Using these function it remain the same Arduino User Experience to light a led
-    HIGH = Light ON
-    LOW  = Light OFF
+      because internally wrap the inversion of the HIGH, LOW meaning.
+    Using these function it remain the same Arduino User Experience to light a led.
+
+    parameter:
+    value = the light intensity. It could be 
+            HIGH   = light to the maximum level
+            LOW    = switch off the Led
+            1..255 = pwm value for different level of light
 
  */
 void ledGreenLight(uint32_t value);
@@ -210,9 +221,28 @@ void ledYellowTwoLight(uint32_t value);
     return:
     1 = button PRESSED
     0 = button RELEASED
-*/
-int button1IsPressed(void);
-int button2IsPressed(void);
+ */
+int isButtonOnePressed(void);
+int isButtonTwoPressed(void);
+
+
+/*
+    Enable/Disable the StepUp
+
+    param:
+    true = Step-up the Battery Power
+    false= Do not Step-up the Battery Power
+ */
+void setStepUp(uint32_t on);
+
+/*
+    Return the information if the StepUp is enabled
+
+    return:
+    true= the StepUp is running
+    false = the Sme is not under StepUp Power
+ */
+bool isOnBattery(void);
 
 #ifdef __cplusplus
 }
