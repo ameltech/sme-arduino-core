@@ -272,6 +272,25 @@ void SERCOM5_Handler()
   BLE.IrqHandler();
 }
 
+void ledYellowTwoLight(uint32_t value) {
+    if (value == HIGH) {
+        digitalWrite(PIN_LED_RXL, LOW);
+        } else if (value == LOW) {
+        digitalWrite(PIN_LED_RXL, HIGH);
+        } else {
+        analogWrite(PIN_LED_RXL, 255-value);   // in case of PWM
+    }
+}
+
+void ledYellowOneLight(uint32_t value)   {
+    if (value == HIGH) {
+        digitalWrite(PIN_LED_TXL, LOW);
+        } else if (value == LOW) {
+        digitalWrite(PIN_LED_TXL, HIGH);
+        } else {
+        analogWrite(PIN_LED_TXL, 255-value);   // in case of PWM
+    }
+}
 
 void ledGreenLight(uint32_t value) {
     if (value == HIGH) {

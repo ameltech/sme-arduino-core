@@ -191,6 +191,18 @@ void ledGreenLight(uint32_t value);
 void ledRedLight(uint32_t value);
 void ledBlueLight(uint32_t value);
 
+/*
+    Yellow Led wrapper function
+    These functions has been created for a more comfortable use 
+      because internally wrap the inversion of the HIGH, LOW meaning
+
+    Using these function it remain the same Arduino User Experience to light a led
+    HIGH = Light ON
+    LOW  = Light OFF
+
+ */
+void ledYellowOneLight(uint32_t value);
+void ledYellowTwoLight(uint32_t value);
 
 /*
     User Button wrapper function.
@@ -257,6 +269,9 @@ extern Uart SigFox;
 #define LED_GREEN_INIT  pinMode(PIN_LED_GREEN, OUTPUT)
 #define LED_RED_INIT    pinMode(PIN_LED_RED, OUTPUT)
 #define LED_BLUE_INIT   pinMode(PIN_LED_BLUE, OUTPUT)
+
+#define LED_YELLOW_TWO_INIT  pinMode(PIN_LED_RXL, OUTPUT)
+#define LED_YELLOW_ONE_INIT  pinMode(PIN_LED_TXL, OUTPUT)
 
 
 extern uint8_t smeInitError;

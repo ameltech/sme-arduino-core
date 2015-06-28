@@ -150,6 +150,11 @@ static void ioExtenderInit(void) {
 
 
 void initVariant() {
+    
+    // initializa the two Yellow Led
+    LED_YELLOW_ONE_INIT;
+    LED_YELLOW_TWO_INIT;
+    
     // reset the I/O Extender
     pinMode(PIN_IO_EXT_RST, OUTPUT);
     digitalWrite(PIN_IO_EXT_RST, LOW);
