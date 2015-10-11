@@ -40,8 +40,8 @@ AMEL_SmartEverything_atmel_ice.bootloader.tool=arduino:openocd
 AMEL_SmartEverything_atmel_ice.bootloader.file=sme/samd21_sam_ba.bin
 
 AMEL_SmartEverything_sam_ice.name=Smart Everything Fox (via SAM-ICE)
-AMEL_SmartEverything_sam_ice.vid.0=0x03eb
-AMEL_SmartEverything_sam_ice.pid.0=0x2111
+AMEL_SmartEverything_sam_ice.vid.0=0x1366
+AMEL_SmartEverything_sam_ice.pid.0=0x0101
 AMEL_SmartEverything_sam_ice.upload.tool=arduino:openocd
 AMEL_SmartEverything_sam_ice.upload.protocol=swd
 AMEL_SmartEverything_sam_ice.upload.maximum_size=262144
