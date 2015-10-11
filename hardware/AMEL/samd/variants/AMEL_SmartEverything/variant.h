@@ -240,6 +240,11 @@ void setStepUp(uint32_t on);
 */
 bool isOnBattery(void);
 
+
+void gpsForceOn(void);
+void sfxSleep(void);
+void sfxWakeup(void);
+
 #ifdef __cplusplus
 }
 #endif

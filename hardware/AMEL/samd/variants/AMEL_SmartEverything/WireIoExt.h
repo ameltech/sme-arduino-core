@@ -30,8 +30,6 @@
 #include "SERCOM.h"
 #include "RingBuffer.h"
 
-#define BUFFER_LENGTH 32
-
 
 class I2CIoExt : public Stream
 {
