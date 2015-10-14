@@ -18,6 +18,8 @@
 */
 
 #include <Arduino.h>
+#include "WireIoExt.h"
+#include "internalI2C.h"
 
 /*
  * Pins descriptions
@@ -354,4 +356,44 @@ void setStepUp(uint32_t on) {
         } else {
         digitalWrite(PIN_REG_ON, LOW);
     }
+}
+
+
+void gpsForceOn(void){
+    bool ret = false;
+    uint8_t delay=0;
+    uint8_t data = 0;
+    
+	// Activate force on moving low
+    data = readRegister(TCA6416A_ADDRESS, OUTPUT_PORT_1);
+    data &= ~GPS_FORCE_ON_PIN;
+    
+	writeRegister(TCA6416A_ADDRESS, OUTPUT_PORT_1, data);
+
+}
+void sfxSleep(void){
+    bool ret = false;
+    uint8_t delay=0;
+    uint8_t data = 0;
+    
+	// read the IoExtender data actual situation
+    data = readRegister(TCA6416A_ADDRESS, OUTPUT_PORT_1);
+    data |= SFX_WAKEUP_PIN; // Put SFX in Sleep
+    
+	// send to IoExtender the new data
+	writeRegister(TCA6416A_ADDRESS, OUTPUT_PORT_1, data);
+
+}
+
+void sfxWakeup(void){
+     bool ret = false;
+     uint8_t delay=0;
+     uint8_t data = 0;
+	 
+     // read the IoExtender data actual situation
+     data = readRegister(TCA6416A_ADDRESS, OUTPUT_PORT_1);
+     data &= ~SFX_WAKEUP_PIN;   // Wakeup SFX
+         
+     // send to IoExtender the new data
+     writeRegister(TCA6416A_ADDRESS, OUTPUT_PORT_1, data);
 }
