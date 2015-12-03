@@ -205,6 +205,11 @@ void ledRedLight(uint32_t value);
 void ledBlueLight(uint32_t value);
 
 /*
+    Wrapper to flash the RGB Led light red or blue or green for X milliseconds
+*/
+void flashLed(uint32_t color, uint32_t time_in_ms);
+
+/*
     Yellow Led wrapper function
     These functions has been created for a more comfortable use 
       because internally wrap the inversion of the HIGH, LOW meaning
