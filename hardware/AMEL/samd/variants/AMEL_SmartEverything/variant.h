@@ -207,7 +207,7 @@ void ledBlueLight(uint32_t value);
 /*
     Wrapper to flash the RGB Led light red or blue or green for X milliseconds
 */
-void flashLed(uint32_t color, uint32_t time_in_ms);
+void flashRGBLed(uint32_t color, uint32_t time_in_ms);
 
 /*
     Yellow Led wrapper function
