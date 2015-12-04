@@ -335,7 +335,7 @@ void ledBlueLight(uint32_t value) {
     }
 }
 
-void flashLed(uint32_t color, uint32_t time_in_ms) {
+void flashRGBLed(uint32_t color, uint32_t time_in_ms) {
     // If the color is not a valid one, do nothing
     if (color == PIN_LED_GREEN || color == PIN_LED_BLUE || color == PIN_LED_RED) {
         digitalWrite(color, LOW);
