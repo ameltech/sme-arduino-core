@@ -1,0 +1,53 @@
+{
+  "packages":
+  [
+    {
+      "name": "AMEL",
+      "maintainer": "AMEL Technology",
+      "websiteURL": "http://www.amel-tech.com",
+      "email": "dev@amel-tech.com",
+      "help": {
+        "online": "http://www.amel-tech.com"
+      },
+      "platforms": [
+        {
+          "name": "AMEL-Tech Boards",
+          "architecture": "samd",
+          "version": "1.0.0",
+          "category": "Partner",
+          "url": "http://downloads.arduino.cc/cores/AMEL-samd-1.0.0.tar.bz2",
+          "archiveFileName": "AMEL-samd-1.0.0.tar.bz2",
+          "checksum": "SHA-256:5399602a89cba1e5371d3c4b2ae17648b6c9f691454a46a58bc0e68b30ab60da",
+          "size": "59673",
+          "boards": [
+            {"name": "SmartEverything Fox"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "4.8.3-2014q1"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.5-arduino"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.9.0-arduino"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.0.0-atmel"
+            }
+          ]
+        }
+      ],
+      "tools": [
+      ]
+    }
+  ]
+}
